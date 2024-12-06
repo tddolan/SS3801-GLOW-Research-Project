@@ -10,10 +10,10 @@ import {
   Link,
   Button,
 } from "@mui/material";
-import MapIcon from "@mui/icons-material/Map";
 import FeedIcon from "@mui/icons-material/Feed";
 import HomeIcon from "@mui/icons-material/Home";
 import SourceIcon from "@mui/icons-material/Source";
+import CommentIcon from '@mui/icons-material/Comment';
 import { usePathname } from "next/navigation";
 
 export default function TopBar() {
@@ -30,19 +30,19 @@ export default function TopBar() {
       href: "/",
     },
     {
-      name: "Map",
-      icon: <MapIcon />,
-      href: "/map",
-    },
-    {
       name: "Info",
       icon: <FeedIcon />,
       href: "/info",
     },
     {
-      name: "Sources",
+      name: "Discussion",
+      icon: <CommentIcon/>,
+      href: "/discussion",
+    },
+    {
+      name: "Database",
       icon: <SourceIcon />,
-      href: "/sources",
+      href: "/database",
     },
   ];
 
@@ -55,8 +55,10 @@ export default function TopBar() {
             alignItems: "center",
             justifyContent: "space-between",
             height: "5rem",
+             justifyItems: "center"
           }}
         >
+          <Box justifyItems={"center"} flex={1}>
           <Card sx={{padding: "0.5rem", overflow: "auto"}}>
             <Stack direction={"row"} flex={1} spacing={10}>
               {links.map((item, index) => (
@@ -64,7 +66,7 @@ export default function TopBar() {
                   <Button
                     sx={{
                       justifyContent: "center",
-                      width: "10rem",
+                      width: item.name.length > 10 ? "15rem" : "10rem",
                     }}
                     fullWidth
                     startIcon={item.icon}
@@ -75,8 +77,7 @@ export default function TopBar() {
                 </Link>
               ))}
             </Stack>
-          </Card>
-          <Box sx={{ display: "flex", alignItems: "center" }}></Box>
+          </Card></Box>
         </Toolbar>
       </AppBar>
     </Box>
