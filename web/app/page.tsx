@@ -35,7 +35,7 @@ export default function Home() {
           <Card>
             <CardMedia
               component="img"
-              height="140"
+              height="300"
               image="https://www.nps.gov/subjects/renewableenergy/images/offshorewind_NREL27847.jpg"
               alt="Image of offshore wind turbines"
             />
@@ -53,7 +53,7 @@ export default function Home() {
           <Card>
             <CardMedia
               component="img"
-              height="140"
+              height="300"
               image="https://svmillets.com/wp-content/uploads/2021/09/AdobeStock_88537080-scaled-300x300.jpeg"
               alt="Image of eco friendly within a speech bubble"
             />
@@ -71,7 +71,7 @@ export default function Home() {
           <Card>
             <CardMedia
               component="img"
-              height="140"
+              height="300"
               image="https://www.3blmedia.com/sites/default/files/styles/carousel_2x/public/citizenship_icon-CI_rev_1_1_.png"
               alt="Image of interlocking hands to show community"
             />
